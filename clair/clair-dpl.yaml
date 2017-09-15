@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: clair
+  labels:
+    app: clair
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: clair
+    spec:
+      containers:
+      - name: clair
+        image: vmware/clair:v2.0.1-photon
+        args: ["-insecure-tls", "-config", "/config/config.yaml"]
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 6060
+        volumeMounts:
+        - name: clair-config
+          mountPath: /config/config.yaml
+          subPath: config.yaml
+      volumes:
+      - name: clair-config
+        secret:
+          secretName: clair-secrets
+          items:
+            - key: config.yaml
+              path: config.yaml
