@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-harbor
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/body-size: "0"
+    ingress.kubernetes.io/proxy-body-size: "0"
+spec:
+  tls:
+  - hosts:
+    - harbor.192.168.99.100.xip.io
+    secretName: ingress-secret
+  rules:
+  - host: harbor.192.168.99.100.xip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ui
+          servicePort: 80
+      - path: /v2
+        backend:
+          serviceName: registry
+          servicePort: 5000
+      - path: /v1
+        backend:
+          serviceName: fake-service
+          servicePort: 5000

@@ -5,7 +5,7 @@ metadata:
 data:
   LOG_LEVEL: "info"
   EXT_ENDPOINT: "https://your-external-address"
-  AUTH_MODE: "ldap_auth"
+  AUTH_MODE: "database"
   SELF_REGISTRATION: "on"
   LDAP_URL: "ldaps://ldapserver"
   LDAP_SEARCH_DN: ""
@@ -35,5 +35,5 @@ data:
   GODEBUG: "netdns=cgo"
   ADMIRAL_URL: "NA"
   WITH_NOTARY: "False"
-  WITH_CLAIR: "True"
+  WITH_CLAIR: "False"
   RESET: "false"

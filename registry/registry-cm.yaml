@@ -27,7 +27,7 @@ data:
     auth:
       token:
         issuer: harbor-token-issuer
-        realm: https://<yout-registry-url>/service/token
+        realm: https://harbor.192.168.99.100.xip.io/service/token
         rootcertbundle: /etc/registry/root.crt
         service: harbor-registry
 

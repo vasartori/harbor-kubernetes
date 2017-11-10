@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   annotations:
-    volume.beta.kubernetes.io/storage-class: <your-storage-class>
+#    volume.beta.kubernetes.io/storage-class: default
   name: mysql-data
 spec:
   accessModes:
