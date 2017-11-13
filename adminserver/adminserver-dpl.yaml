@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: adminserver
-        image: vmware/harbor-adminserver:v1.2.0
+        image: vmware/harbor-adminserver:v1.2.2
         imagePullPolicy: IfNotPresent
         env:
           - name: LOG_LEVEL

@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: jobservice
-        image: vmware/harbor-jobservice:v1.2.0
+        image: vmware/harbor-jobservice:v1.2.2
         env:
           - name: UI_SECRET
             valueFrom:

@@ -10,9 +10,6 @@ spec:
     metadata:
       labels:
         app: nginx
-        workstations: ingress
-        workstations-ingress-http: allow
-        workstations-ingress-https: allow
     spec:
       containers:
       - name: nginx
