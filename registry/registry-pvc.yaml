@@ -2,11 +2,11 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   annotations:
-    volume.beta.kubernetes.io/storage-class: <your-storage-class>
+#     volume.beta.kubernetes.io/storage-class: default
   name: registry-data
 spec:
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 50Gi
+      storage: 1Gi
