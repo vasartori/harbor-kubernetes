@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: jobservice
-        image: vmware/harbor-jobservice:v1.2.2
+        image: vmware/harbor-jobservice:v1.4.0
         env:
           - name: UI_SECRET
             valueFrom:
@@ -33,7 +33,7 @@ spec:
             value: netdns=cgo
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: jobservice-config
           mountPath: /etc/jobservice/app.conf

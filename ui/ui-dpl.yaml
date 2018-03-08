@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: ui
-        image: vmware/harbor-ui:v1.2.2
+        image: vmware/harbor-ui:v1.4.0
         env:
           - name: UI_SECRET
             valueFrom:
@@ -35,7 +35,7 @@ spec:
             value: "1"
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: ui-config
           mountPath: /etc/ui/app.conf

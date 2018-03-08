@@ -9,4 +9,4 @@ data:
     enablegzip = true
 
     [prod]
-    httpport = 80
+    httpport = 8080

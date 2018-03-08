@@ -8,4 +8,4 @@ data:
     runmode = dev
 
     [dev]
-    httpport = 80
+    httpport = 8080
