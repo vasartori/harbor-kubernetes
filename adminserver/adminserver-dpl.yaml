@@ -102,8 +102,8 @@ spec:
 
           - name: EMAIL_PWD
             valueFrom:
-              configMapKeyRef:
-                name: adminserver-config
+              secretKeyRef:
+                name: adminserver-secrets
                 key: EMAIL_PWD
 
           - name: EMAIL_SSL
