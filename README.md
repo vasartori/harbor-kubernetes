@@ -1,3 +1,7 @@
+# This repo has old versions and is unmainted for a long time. 
+# Harbor has native support for kubernetes.
+
+
 # VMWare Harbor "hard way"
 
 All components of harbor was separeted in directories (with a intuitive name :p);
